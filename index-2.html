@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Archiox - HTML 5 Template Preview</title>
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="src/output.css">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+
+        <!-- preloader -->
+        <div id="preloader" class="fixed inset-0 bg-white z-[99999999] flex items-center justify-center">
+            <div class="text-center">
+                <div class="w-24 h-24 border-4 border-secondary-color border-t-white rounded-full animate-spin mx-auto mb-4"></div>
+                <p id="preloader-text" class="text-xl font-semibold text-title-color">0%</p>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+
+        <!-- rtl toggle switch -->
+        <button id="rtlToggle" class="fixed top-1/2 left-0 z-[999] mt-[-40px] flex items-center justify-center h-8 w-8 leading-8 text-center bg-theme-color cursor-pointer text-[14px] text-white font-medium uppercase"><span class="inline-block rtl:hidden">RTL</span><span class="hidden rtl:inline-block">Ltr</span></button>
+        <!-- rtl toggle switch end -->
+
+        
+        <!-- dark-mode-switch -->
+        <div class="mode-switch fixed top-1/2 left-0 z-[999]">
+            <button id="darkToggle" class="relative flex items-center justify-center h-8 w-8 leading-8 text-center bg-theme-color cursor-pointer">
+                <svg class="w-5 h-5 dark:hidden" fill="#fff" stroke-linejoin="round" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0.25V1V1.5H11L11.75 1.5V3H11H10.5V3.5V4.25H9V3.5V3H8.5H7.75V1.5H8.5H9V1V0.25H10.5ZM3.25514 2.75496C2.33413 3.53491 1.75 4.69972 1.75 6C1.75 8.34721 3.65279 10.25 6 10.25C7.30029 10.25 8.4651 9.66587 9.24505 8.74485C9.16377 8.74827 9.08207 8.74999 9 8.74999C5.82436 8.74999 3.25 6.17563 3.25 2.99999C3.25 2.91792 3.25172 2.83623 3.25514 2.75496ZM0.25 6C0.25 3.51072 1.83142 1.39271 4.042 0.592193L5.00256 1.55275C4.83933 2.00347 4.75 2.49047 4.75 2.99999C4.75 5.3472 6.65279 7.24999 9 7.24999C9.50953 7.24999 9.99653 7.16065 10.4473 6.99743L11.4078 7.95798C10.6073 10.1686 8.48929 11.75 6 11.75C2.82436 11.75 0.25 9.17564 0.25 6Z" fill="#fff" transform="translate(2.25, 2.25)"></path>
+                </svg>
+
+                <svg class="w-5 h-5 hidden dark:inline-block" fill="#000" viewBox="0 0 16 16" data-testid="light-icon" stroke-linejoin="round">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 1V0.25H6.25V1V1.25V2H7.75V1.25V1ZM7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9ZM7 10.5C8.933 10.5 10.5 8.933 10.5 7C10.5 5.067 8.933 3.5 7 3.5C5.067 3.5 3.5 5.067 3.5 7C3.5 8.933 5.067 10.5 7 10.5ZM7.75 12V12.75V13V13.75H6.25V13V12.75V12H7.75ZM12 6.25H12.75H13H13.75V7.75H13H12.75H12V6.25ZM1 6.25H0.25V7.75H1H1.25H2V6.25H1.25H1ZM10.0052 2.93414L10.5355 2.40381L10.7123 2.22703L11.2426 1.6967L12.3033 2.75736L11.773 3.28769L11.5962 3.46447L11.0659 3.9948L10.0052 2.93414ZM2.22703 10.7123L1.6967 11.2426L2.75736 12.3033L3.28769 11.773L3.46447 11.5962L3.9948 11.0659L2.93414 10.0052L2.40381 10.5355L2.22703 10.7123ZM2.93414 3.9948L2.40381 3.46447L2.22703 3.28769L1.6967 2.75736L2.75736 1.6967L3.28769 2.22703L3.46447 2.40381L3.9948 2.93414L2.93414 3.9948ZM10.7123 11.773L11.2426 12.3033L12.3033 11.2426L11.773 10.7123L11.5962 10.5355L11.0659 10.0052L10.0052 11.0659L10.5355 11.5962L10.7123 11.773Z" fill="#fff" transform="translate(1.25, 1.25)"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <!-- main header -->
+        <header class="main-header relative w-full z-99999">
+
+            <div class="header-lower relativew-full pt-5 pb-5">
+                <div class="container-layout">
+                    <div class="relative flex items-center justify-between">  
+                        <div class="header-logo">
+                            <figure class="logo-box flex dark:hidden">
+                                <a href="index.html" class="relative inline-block"><img src="assets/images/logo.png" alt=""></a>
+                            </figure>
+                            <figure class="logo-box hidden dark:flex">
+                                <a href="index.html" class="relative inline-block"><img src="assets/images/logo-2.png" alt=""></a>
+                            </figure>
+                        </div>
+                        <div class="menu-area">
+                            <!--Mobile Navigation Toggler-->
+                            <div class="mobile-nav-toggler relative md:hidden w-[50px] block p-[10px] h-[36px] cursor-pointer">
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light hidden md:block">
+                                <div class="navbar-collapse show clearfix">
+                                    <ul class="navigation sm:flex items-center">
+                                    
+                                        <li class="dropdown md:inline-block group">
+                                            <a href="#" class="nav-link current">Home</a>
+                                            <div class="megamenu w-full px-10 py-[50px] pb-2.5 left-0 flex items-center justify-center gap-[30px]">
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index.html"><img src="assets/images/resource/menu-1.jpg" alt=""></a></div>
+                                                    <h4><a href="index.html">Home Page 01</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-2.html"><img src="assets/images/resource/menu-2.jpg" alt=""></a></div>
+                                                    <h4><a href="index-2.html">Home Page 02</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-3.html"><img src="assets/images/resource/menu-3.jpg" alt=""></a></div>
+                                                    <h4><a href="index-3.html">Home Page 03</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-4.html"><img src="assets/images/resource/menu-4.jpg" alt=""></a></div>
+                                                    <h4><a href="index-4.html">Home Page 04</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-5.html"><img src="assets/images/resource/menu-5.jpg" alt=""></a></div>
+                                                    <h4><a href="index-4.html">Home Page 05</a></h4>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="dropdown sm:inline-block relative group">
+                                            <a href="#" class="nav-link">About Us</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.html" class="sub-menu-link">About Us</a></li>
+                                                <li><a href="testimonials.html" class="sub-menu-link">Testimonials</a></li>
+                                                <li><a href="project.html" class="sub-menu-link">Our Projects</a></li>
+                                                <li><a href="error.html" class="sub-menu-link">404</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown lg:inline-block relative group">
+                                            <a href="#" class="nav-link">Team</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="team.html" class="sub-menu-link">Core teams</a></li>
+                                                <li><a href="team-details.html" class="sub-menu-link">Team Details</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown lg:inline-block relative group">
+                                            <a href="#" class="nav-link">Services</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="service.html" class="sub-menu-link">Our Services</a></li>
+                                                <li><a href="service-details.html" class="sub-menu-link">Service Details</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown lg:inline-block relative group">
+                                            <a href="#" class="nav-link">Blog</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog.html" class="sub-menu-link">Blog Grid</a></li>
+                                                <li><a href="blog-2.html" class="sub-menu-link">Blog Grid Sidebar</a></li>
+                                                <li><a href="blog-3.html" class="sub-menu-link">Blog Standard</a></li>
+                                                <li><a href="blog-4.html" class="sub-menu-link">Blog Standard Sidebar</a></li>
+                                                <li><a href="blog-details.html" class="sub-menu-link">Blog Details</a></li>
+                                                <li><a href="blog-details-2.html" class="sub-menu-link">Blog Details Sidebar</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="lg:inline-block">
+                                            <a href="contact.html" class="nav-link">Contact Us</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="menu-right-content relative sm:block hidden">
+                            <div class="btn-box"><a href="index.html" class="theme-btn secondary-btn px-5 py-[7px]"><span class="btn-text"><span>Get started</span></span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- sticky-header -->
+            <div class="sticky-header">
+                <div class="container-layout">
+                    <div class="relative flex items-center justify-between pt-3.5 pb-3.5">
+                        <figure class="logo-box block dark:hidden relative xl:pt-0 pt-[15px] xl:pb-0 pb-[15px]">
+                            <a href="index.html" class="relative inline-block"><img src="assets/images/logo.png" alt=""></a>
+                        </figure>
+                        <figure class="logo-box hidden dark:block relative xl:pt-0 pt-[15px] xl:pb-0 pb-[15px]">
+                            <a href="index.html" class="relative inline-block"><img src="assets/images/logo-2.png" alt=""></a>
+                        </figure>
+                        <div class="menu-area">
+                            <div class="mobile-nav-toggler relative md:hidden w-[50px] block p-[10px] h-[36px] cursor-pointer">
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light hidden md:block">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </nav>
+                        </div>
+                        <div class="menu-right-content relative sm:block hidden">
+                            <div class="btn-box"><a href="index.html" class="theme-btn secondary-btn px-5 py-[7px]"><span class="btn-text"><span>Get started</span></span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main-header end -->
+
+        
+        <!-- mobile-menu -->
+        <div class="mobile-menu [.mobile-menu-visible_&]:opacity-100 [.mobile-menu-visible_&]:visible fixed right-0 top-0 w-96 pr-[30px] max-w-full h-full opacity-0 invisible z-[999999] duration-700" data-lenis-prevent="true">
+            <div class="menu-backdrop fixed left-0 top-0 rtl:left-[inherit] rtl:right-0 w-full pr-[30px] max-w-full h-full z-10 bg-black duration-700 transition-all [.mobile-menu-visible_&]:opacity-70 [.mobile-menu-visible_&]:visible [.mobile-menu-visible_&]:right-full [.mobile-menu-visible_&]:ease-out rtl:[.mobile-menu-visible_&]:right-0"></div>
+            <nav class="menu-box absolute pt-7 left-0 top-0 w-full h-full max-h-full overflow-y-auto bg-secondary-color z-50 opacity-0 invisible duration-700 transition-all ease-in-out translate-x-full [.mobile-menu-visible_&]:opacity-100 [.mobile-menu-visible_&]:visible [.mobile-menu-visible_&]:translate-x-0">
+                
+                <div class="mobile-menu-logo flex items-center justify-between relative pt-3 pb-16 pl-7 pr-7">
+                    <a href="index.html"><img src="assets/images/logo-2.png" alt="" title=""></a>
+                    <div class="close-btn z-[99] text-white text-2xl cursor-pointer hover:text-theme-color duration-500">X</div>
+                </div>
+
+                <div class="menu-inner">
+                    <ul class="relative block w-full border-b border-[rgba(255,255,255,0.1)]">
+                        <!-- home -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative current block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13  ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Home</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 01</a></li>
+                                <li class="relative current block border-t border-[rgba(255,255,255,0.1)]"><a href="index-2.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 02</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index-3.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 03</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index-4.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 04</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index-5.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 05</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- about-->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">About Us</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="about.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">About Us</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="testimonials.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Testimonials</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="project.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Our Project</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="error.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">404</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- team -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Team</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="team.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Core teams</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="team-details.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Team Details</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- services -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Services</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="service.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Our Services</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="service-details.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Service Details</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- blog -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Blog</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Grid</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-2.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Grid Sidebar</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-3.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Standard</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-4.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Standard Sidebar</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-details.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Details</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-details-2.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Details Sidebar</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- contact -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="contact.html" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- contact-info -->
+                <div class="contact-info relative pt-28 pb-7 pl-7 pr-7">
+                    <h4 class="text-[20px] leading-7 font-bold text-white mb-5">Contact Info</h4>
+                    <ul>
+                        <li class="mb-3 block text-white opacity-80">Chicago 12, Melborne City, USA</li>
+                        <li class="mb-3 block"><a href="tel:+8801682648101" class="inline-block text-white opacity-80 hover:text-theme-color ">+88 01682648101</a></li>
+                        <li class="block"><a href="mailto:info@example.com" class="inline-block text-white opacity-80 hover:text-theme-color ">info@example.com</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- mobile-menu end -->
+
+
+        <!-- banner-two -->
+        <section class="banner-two relative pt-[60px] sm:pb-[100px] pb-14">
+            <div class="relative overflow-hidden max-w-[1380px] mx-auto pt-[60px] sm:pb-[439px] pb-[60px] rounded-3xl">
+                <div class="banner-bg-image-two scroll-bg-image absolute left-0 top-0 w-full h-full bg-cover bg-no-repeat bg-center rounded-2xl" style="background-image: url(assets/images/banner/banner-2.jpg);"></div>
+
+                <div class="sm:flex justify-between gap-7 max-w-[1200px] mx-auto px-[15px]">
+                    <h2 class="max-w-[580px] sm:text-[56px] sm:leading-[67px] text-4xl leading-11 sm:mb-0 mb-5">Let&apos;s design the building you&apos;ve always imagined.</h2>
+                    <p class="max-w-[475px] text-2xl leading-[29px] sm:text-text-color text-title-color dark:text-white">We provide tailored design and construction solutions to meet all your architectural needs.</p>
+                </div>
+            </div>
+        </section>
+        <!-- banner-two end -->
+
+
+        <!-- clients-section -->
+        <section class="clients-section pt-10 pb-10 text-center rtl:[direction:ltr]">
+            <div class="outer-container relative overflow-hidden before:absolute before:content-[''] before:left-0 before:right-0 before:w-full before:h-full before:bg-[linear-gradient(90deg,#FFFFFF_0%,rgba(255,255,255,0.9)_15%,rgba(255,255,255,0)_50%,rgba(255,255,255,0.9)_85%,#FFFFFF_100%)] dark:before:bg-[linear-gradient(90deg,#1A1A1A_0%,rgba(26,26,26,0.9)_15%,rgba(26,26,26,0)_50%,rgba(26,26,26,0.9)_85%,#1A1A1A_100%)] before:z-10">
+                <h5 class="wow fadeUp text-[18px] leading-[22px] mb-12">Tools & rendor which we use</h5>
+                <div class="wow fadeUp marquee_mode-rightToLeft">
+                    <ul class="clients-list flex items-center flex-nowrap w-fit">
+                        <li class="relative pr-14 mr-14 border-r border-[#66625E]"><img src="assets/images/clients/clients-1.png" alt=""></li>
+                        <li class="relative pr-14 mr-14 border-r border-[#66625E]"><img src="assets/images/clients/clients-2.png" alt=""></li>
+                        <li class="relative pr-14 mr-14 border-r border-[#66625E]"><img src="assets/images/clients/clients-3.png" alt=""></li>
+                        <li class="relative pr-14 mr-14 border-r border-[#66625E]"><img src="assets/images/clients/clients-4.png" alt=""></li>
+                        <li class="relative pr-14 mr-14 border-r border-[#66625E]"><img src="assets/images/clients/clients-5.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- clients-section end -->
+
+
+        <!-- about-two -->
+        <section class="about-section sm:pt-[100px] pt-10 sm:pb-[100px] pb-7">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+                    <div class="md:col-span-5 wow fadeUp lg:mb-0 mb-6">
+                        <h2 class="text-[56px] leading-[67px]">About Us</h2>
+                    </div>
+                    <div class="md:col-span-7 wow fadeUp">
+                        <div class="mb-10">
+                            <p class="text-[32px] leading-[38px] mb-10">ArchioX is driven by a passion for creating exceptional architectural spaces. From elegant homes to cutting-edge workplaces, we turn your ideas into reality.</p>
+                            <p class="text-[32px] leading-[38px]">Our approach blends creativity, functionality, and precision. Each project is crafted to inspire, leave a lasting impression, and stand the test of time.</p>
+                        </div>
+                        <div class="fact-box grid md:grid-cols-3 sm:grid-cols-2 gap-5">
+                            <div class="md:mb-0 mb-4">
+                                <p class="text-base leading-6 mb-2.5">Establised for</p>
+                                <div class="count-box flex items-end overflow-hidden gap-1.5"><span class="odometer text-8xl leading-[115px] text-title-color dark:text-white" data-count="9">00</span><span class="relative inline-block text-base leading-6 top-[-15px]">Years</span></div>
+                            </div>
+                            <div class="md:mb-0 mb-4">
+                                <p class="text-base leading-6 mb-2.5">Work across</p>
+                                <div class="count-box flex items-end overflow-hidden gap-1.5"><span class="odometer text-8xl leading-[115px] text-title-color dark:text-white" data-count="6">00</span><span class="relative inline-block text-base leading-6 top-[-15px]">Countries</span></div>
+                            </div>
+                            <div class="md:mb-0 mb-4">
+                                <p class="text-base leading-6 mb-2.5">Over</p>
+                                <div class="count-box flex items-end overflow-hidden gap-1.5"><span class="odometer text-8xl leading-[115px] text-title-color dark:text-white" data-count="16">00</span><span class="relative inline-block text-base leading-6 top-[-15px]">Projects</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-two end -->
+
+
+        <!-- section -->
+        <section class="sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="px-[30px] py-[30px] rounded-3xl bg-secondary-color dark:bg-[rgba(255,255,255,0.05)] overflow-hidden tabs-box">
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <div class="tab-buttons">
+                            <div class="tab-btn active-btn rounded-2xl px-[30px] py-[30px] [&.active-btn]:bg-white cursor-pointer" data-tab="#tab-1">
+                                <h3 class="text-[32px] leading-[38px] mb-4">1. Eco-Friendly Materiality</h3>
+                                <p class="text-white [.active-btn_&]:text-text-color">We design responsibly, using sustainable materials, energy-efficient systems, and eco-friendly construction methods to create beautiful, durable, and comfortable spaces.</p>
+                            </div>
+                            <div class="tab-btn rounded-2xl px-[30px] py-[30px] [&.active-btn]:bg-white cursor-pointer" data-tab="#tab-2">
+                                <h3 class="text-[32px] leading-[38px] mb-4">2. Sustainable Living Design Principles</h3>
+                                <p class="text-white [.active-btn_&]:text-text-color">We use innovative, eco friendly materials and technologies to create energy efficient, cost-effective homes without compromising beauty, functionality, or comfort.</p>
+                            </div>
+                            <div class="tab-btn rounded-2xl px-[30px] py-[30px] [&.active-btn]:bg-white cursor-pointer" data-tab="#tab-3">
+                                <h3 class="text-[32px] leading-[38px] mb-4">3. Green Home Solutions</h3>
+                                <p class="text-white [.active-btn_&]:text-text-color">Innovative, eco conscious technologies and materials that create homes which are efficient, cost effective, and kind to the planet without compromising beauty or convenience.</p>
+                            </div>
+                        </div>
+                        <div class="tabs-content relative pt-[22px] xs:px-[30px] px-[15px] sm:pb-[330px] pb-[100px] rounded-2xl overflow-hidden">
+                            <div class="bg-image absolute left-0 top-0 w-full h-full bg-center bg-cover bg-no-repeat" style="background-image: url(assets/images/background/tab-1.jpg);"></div>
+                            <div class="relative px-5 py-5 pt-[38px] rounded-[14px] backdrop-blur-[50px] bg-[linear-gradient(99.78deg,rgba(255,255,255,0.06)_0.76%,rgba(255,255,255,0.02)_100%)]">
+                                <div class="tab active-tab" id="tab-1">
+                                    <div class="single-item-carousel rtl:[direction:ltr]">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">50%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">20%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">60%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">40%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">45%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">70%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">80%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">40%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-column-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="tab" id="tab-2">
+                                    <div class="single-item-carousel rtl:[direction:ltr]">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">70%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">30%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">70%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">30%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">70%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">30%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">70%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">30%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-column-pagination"></div>
+                                    </div>
+                                </div>
+                                <div class="tab" id="tab-3">
+                                    <div class="single-item-carousel rtl:[direction:ltr]">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">60%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">40%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">60%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">40%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">60%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">40%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="content-box rtl:[direction:rtl]">
+                                                    <p class="text-white mb-3.5">Did you know that specifying bamboo for structural and finishing applications can reduce embodied carbon emissions by up to 80% compared to traditional hardwood species?</p>
+                                                    <div class="grid sm:grid-cols-2 gap-5">
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">60%</span>
+                                                            <p class="text-base leading-6 text-white">Global carbon emissions</p>
+                                                        </div>
+                                                        <div class="relative">
+                                                            <span class="relative block text-white text-[40px] leading-12 mb-2">40%</span>
+                                                            <p class="text-base leading-6 text-white">Cut by eco-friendly construction</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="single-column-pagination"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section -->
+
+
+        <!-- project-two -->
+        <section class="project-two sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="sec-title mb-12 wow fadeUp">
+                    <h2 class="mb-3.5">Our Project</h2>
+                    <p class="text-2xl leading-9 max-w-[790px]">Built with light, crafted with purpose. Our portfolio embodies timeless design and responsible architecture.</p>
+                </div>
+                <div class="project-wrapper relative overflow-hidden">
+                    <div class="project-block relative group px-2.5 py-2.5 rounded-2xl bg-[#F2F2F2] dark:bg-[#111111] overflow-hidden mb-5 block-stack">
+                        <div class="grid sm:grid-cols-2 gap-10">
+                            <figure class="image rounded-[10px] overflow-hidden"><a href="index.html"><img src="assets/images/project/project-7.jpg" alt="" class="w-full group-hover:transform group-hover:scale-110 group-hover:opacity-50 duration-500 rounded-2xl"></a></figure>
+                            <div class="content-box py-5 grid justify-between items-end gap-7">
+                                <div class="h-full">
+                                    <h3 class="text-[32px] leading-[38px] mb-3"><a href="index-2.html" class="hover:text-theme-color">Eco Urban House</a></h3>
+                                    <p>A refined hillside home merging sustainability with modern minimalism. Expansive glazing and open-plan design create a seamless connection between nature and living space.</p>
+                                </div>
+                                <ul class="h-full">
+                                    <li class="block mb-1.5">
+                                        <div class="inline-flex items-center gap-2.5 bg-[linear-gradient(90deg,rgba(255,118,118,0.04)_0%,rgba(255,118,118,0.02)_100%)] rounded-[50px] border border-[rgba(255,118,118,0.2)] pt-[7px] pb-[7px] pl-[7px] pr-[15px]">
+                                            <div class="icon-box inline-flex items-center justify-center w-8 h-8 rounded-full leading-8 text-center bg-theme-color">
+                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.869044 9.39517C-0.203956 6.04517 1.05104 1.88017 4.56804 0.748166C6.41804 0.151166 8.70104 0.649166 9.99804 2.43817C11.221 0.583166 13.57 0.155166 15.418 0.748166C18.934 1.88017 20.196 6.04517 19.124 9.39517C17.454 14.7052 11.627 17.4712 9.99804 17.4712C8.78704 17.4712 5.28304 15.9762 2.85704 13.0002" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M13.7361 4.5127C14.9431 4.6367 15.6981 5.5937 15.6531 6.9347" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block"/>
+                                                </svg>
+                                            </div>
+                                            <span class="leading-[22px] text-title-color dark:text-white">Awaed-winning firm</span>
+                                        </div>
+                                    </li>
+                                    <li class="block">
+                                        <div class="inline-flex items-center gap-2.5 bg-[linear-gradient(90deg,rgba(255,118,118,0.04)_0%,rgba(255,118,118,0.02)_100%)] rounded-[50px] border border-[rgba(255,118,118,0.2)] pt-[7px] pb-[7px] pl-[7px] pr-[15px]">
+                                            <div class="icon-box inline-flex items-center justify-center w-8 h-8 rounded-full leading-8 text-center bg-theme-color">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 9.75C0.5 16.687 2.813 19 9.75 19C16.687 19 19 16.687 19 9.75C19 2.813 16.687 0.5 9.75 0.5C2.813 0.5 0.5 2.813 0.5 9.75Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.34915 6.53395C8.34915 7.50695 7.56115 8.29495 6.58815 8.29495C5.61615 8.29495 4.82715 7.50695 4.82715 6.53395C4.82715 5.56095 5.61615 4.77295 6.58815 4.77295" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M18.8702 12.4172C17.9892 11.5112 16.7432 9.68018 14.4542 9.68018C12.1652 9.68018 12.1152 13.7182 9.77919 13.7182C7.44219 13.7182 6.50119 12.3472 4.97819 13.0632C4.47519 13.2992 4.00319 13.7682 3.59619 14.2912" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                            <span class="leading-[22px] text-title-color dark:text-white">Green home solutions</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="grid sm:grid-cols-3 gap-2.5">
+                                    <div class="sm:mb-0 mb-3">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Total area</h3>
+                                        <span class="block text-base leading-6">326 sqm</span>
+                                    </div>
+                                    <div class="sm:mb-0 mb-3">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Total room</h3>
+                                        <span class="block text-base leading-6">6 rooms</span>
+                                    </div>
+                                    <div class="sm:mb-0">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Date of build</h3>
+                                        <span class="block text-base leading-6">Aug, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-block relative group px-2.5 py-2.5 rounded-2xl bg-[#F2F2F2] dark:bg-[#111111] overflow-hidden mb-5 block-stack">
+                        <div class="grid sm:grid-cols-2 gap-10">
+                            <figure class="image rounded-[10px] overflow-hidden"><a href="index.html"><img src="assets/images/project/project-8.jpg" alt="" class="w-full group-hover:transform group-hover:scale-110 group-hover:opacity-50 duration-500 rounded-2xl"></a></figure>
+                            <div class="content-box py-5 grid justify-between items-end gap-7">
+                                <div class="h-full">
+                                    <h3 class="text-[32px] leading-[38px] mb-3"><a href="index-2.html" class="hover:text-theme-color">Mono Studio Soft</a></h3>
+                                    <p>A refined blend of simplicity and function, this loft features clean geometry, natural textures, and sustainable design crafted for contemporary urban lifestyles.</p>
+                                </div>
+                                <ul class="h-full">
+                                    <li class="block mb-1.5">
+                                        <div class="inline-flex items-center gap-2.5 bg-[linear-gradient(90deg,rgba(255,118,118,0.04)_0%,rgba(255,118,118,0.02)_100%)] rounded-[50px] border border-[rgba(255,118,118,0.2)] pt-[7px] pb-[7px] pl-[7px] pr-[15px]">
+                                            <div class="icon-box inline-flex items-center justify-center w-8 h-8 rounded-full leading-8 text-center bg-theme-color">
+                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.869044 9.39517C-0.203956 6.04517 1.05104 1.88017 4.56804 0.748166C6.41804 0.151166 8.70104 0.649166 9.99804 2.43817C11.221 0.583166 13.57 0.155166 15.418 0.748166C18.934 1.88017 20.196 6.04517 19.124 9.39517C17.454 14.7052 11.627 17.4712 9.99804 17.4712C8.78704 17.4712 5.28304 15.9762 2.85704 13.0002" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M13.7361 4.5127C14.9431 4.6367 15.6981 5.5937 15.6531 6.9347" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block"/>
+                                                </svg>
+                                            </div>
+                                            <span class="leading-[22px] text-title-color dark:text-white">Eco friendly construction</span>
+                                        </div>
+                                    </li>
+                                    <li class="block mb-1.5">
+                                        <div class="inline-flex items-center gap-2.5 bg-[linear-gradient(90deg,rgba(255,118,118,0.04)_0%,rgba(255,118,118,0.02)_100%)] rounded-[50px] border border-[rgba(255,118,118,0.2)] pt-[7px] pb-[7px] pl-[7px] pr-[15px]">
+                                            <div class="icon-box inline-flex items-center justify-center w-8 h-8 rounded-full leading-8 text-center bg-theme-color">
+                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 9.75C0.5 16.687 2.813 19 9.75 19C16.687 19 19 16.687 19 9.75C19 2.813 16.687 0.5 9.75 0.5C2.813 0.5 0.5 2.813 0.5 9.75Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M8.34915 6.53395C8.34915 7.50695 7.56115 8.29495 6.58815 8.29495C5.61615 8.29495 4.82715 7.50695 4.82715 6.53395C4.82715 5.56095 5.61615 4.77295 6.58815 4.77295" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M18.8702 12.4172C17.9892 11.5112 16.7432 9.68018 14.4542 9.68018C12.1652 9.68018 12.1152 13.7182 9.77919 13.7182C7.44219 13.7182 6.50119 12.3472 4.97819 13.0632C4.47519 13.2992 4.00319 13.7682 3.59619 14.2912" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                            <span class="leading-[22px] text-title-color dark:text-white">Eco conscious architecture</span>
+                                        </div>
+                                    </li>
+                                    <li class="block">
+                                        <div class="inline-flex items-center gap-2.5 bg-[linear-gradient(90deg,rgba(255,118,118,0.04)_0%,rgba(255,118,118,0.02)_100%)] rounded-[50px] border border-[rgba(255,118,118,0.2)] pt-[7px] pb-[7px] pl-[7px] pr-[15px]">
+                                            <div class="icon-box inline-flex items-center justify-center w-8 h-8 rounded-full leading-8 text-center bg-theme-color">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.445 3.06104C19.56 3.22704 21 3.83904 21 6.10104C21 9.82704 14.017 12.205 14.017 15.6C14.017 18.994 14.014 21 12.004 21C9.992 21 9.984 18.994 9.984 15.6C9.984 12.205 3 9.82704 3 6.10104C3 2.95304 5.79 3.00004 11.999 3.00004" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                            <span class="leading-[22px] text-title-color dark:text-white">Green home solutions</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="grid sm:grid-cols-3 gap-2.5">
+                                    <div class="sm:mb-0 mb-3">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Total area</h3>
+                                        <span class="block text-base leading-6">326 sqm</span>
+                                    </div>
+                                    <div class="sm:mb-0 mb-3">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Total room</h3>
+                                        <span class="block text-base leading-6">6 rooms</span>
+                                    </div>
+                                    <div class="sm:mb-0">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Date of build</h3>
+                                        <span class="block text-base leading-6">Aug, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-block relative group px-2.5 py-2.5 rounded-2xl bg-[#F2F2F2] dark:bg-[#111111] overflow-hidden">
+                        <div class="grid sm:grid-cols-2 gap-10">
+                            <figure class="image rounded-[10px] overflow-hidden"><a href="index.html"><img src="assets/images/project/project-7.jpg" alt="" class="w-full group-hover:transform group-hover:scale-110 group-hover:opacity-50 duration-500 rounded-2xl"></a></figure>
+                            <div class="content-box py-5 grid justify-between items-end gap-7">
+                                <div class="h-full">
+                                    <h3 class="text-[32px] leading-[38px] mb-3"><a href="index-2.html" class="hover:text-theme-color">Elysia House</a></h3>
+                                    <p>A minimalist retreat that blends natural materials, abundant light, and passive solar design to create a bright, energy-efficient living experience.</p>
+                                </div>
+                                <ul class="h-full">
+                                    <li class="block mb-1.5">
+                                        <div class="inline-flex items-center gap-2.5 bg-[linear-gradient(90deg,rgba(255,118,118,0.04)_0%,rgba(255,118,118,0.02)_100%)] rounded-[50px] border border-[rgba(255,118,118,0.2)] pt-[7px] pb-[7px] pl-[7px] pr-[15px]">
+                                            <div class="icon-box inline-flex items-center justify-center w-8 h-8 rounded-full leading-8 text-center bg-theme-color">
+                                                <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.869044 9.39517C-0.203956 6.04517 1.05104 1.88017 4.56804 0.748166C6.41804 0.151166 8.70104 0.649166 9.99804 2.43817C11.221 0.583166 13.57 0.155166 15.418 0.748166C18.934 1.88017 20.196 6.04517 19.124 9.39517C17.454 14.7052 11.627 17.4712 9.99804 17.4712C8.78704 17.4712 5.28304 15.9762 2.85704 13.0002" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M13.7361 4.5127C14.9431 4.6367 15.6981 5.5937 15.6531 6.9347" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block"/>
+                                                </svg>
+                                            </div>
+                                            <span class="leading-[22px] text-title-color dark:text-white">Awaed-winning firm</span>
+                                        </div>
+                                    </li>
+                                    <li class="block">
+                                        <div class="inline-flex items-center gap-2.5 bg-[linear-gradient(90deg,rgba(255,118,118,0.04)_0%,rgba(255,118,118,0.02)_100%)] rounded-[50px] border border-[rgba(255,118,118,0.2)] pt-[7px] pb-[7px] pl-[7px] pr-[15px]">
+                                            <div class="icon-box inline-flex items-center justify-center w-8 h-8 rounded-full leading-8 text-center bg-theme-color">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.445 3.06104C19.56 3.22704 21 3.83904 21 6.10104C21 9.82704 14.017 12.205 14.017 15.6C14.017 18.994 14.014 21 12.004 21C9.992 21 9.984 18.994 9.984 15.6C9.984 12.205 3 9.82704 3 6.10104C3 2.95304 5.79 3.00004 11.999 3.00004" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                            <span class="leading-[22px] text-title-color dark:text-white">Green home solutions</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="grid sm:grid-cols-3 gap-2.5">
+                                    <div class="sm:mb-0 mb-3">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Total area</h3>
+                                        <span class="block text-base leading-6">326 sqm</span>
+                                    </div>
+                                    <div class="sm:mb-0 mb-3">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Total room</h3>
+                                        <span class="block text-base leading-6">6 rooms</span>
+                                    </div>
+                                    <div class="sm:mb-0">
+                                        <h3 class="text-2xl leading-[29px] mb-2">Date of build</h3>
+                                        <span class="block text-base leading-6">Aug, 2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- project-two end -->
+
+
+        <!-- testimonial-section -->
+        <section class="testimonial-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="sec-title mb-12 wow fadeUp text-center">
+                    <h2 class="mb-3.5">Testimonials</h2>
+                    <p class="text-2xl leading-9">Hear the voices from the spaces we&apos;ve built</p>
+                </div>
+                <div class="three-item-carousel wow fadeUp rtl:[direction:ltr]">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-block group relative rtl:[direction:rtl] px-[29px] pt-[29px] pb-[29px] hover:pt-[269px] rounded-2xl bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)] border border-[rgba(102,98,94,0.10)] duration-500">
+                                <div class="absolute left-[29px] top-[29px] w-[calc(100%-58px)] rounded-[10px] h-[240px] bg-cover bg-no-repeat bg-center scale-y-0 group-hover:scale-y-100 origin-[top_center] duration-500" style="background-image: url(assets/images/resource/testimonial-1.jpg);"></div>
+                                <div class="group-hover:pt-6 duration-500">
+                                    <p class="text-[20px] leading-[30px] text-title-color dark:text-white mb-5">“ArchioX turned our dream home into a masterpiece. Every detail from layout to lighting reflects their dedication and creativity.”</p>
+                                    <h3 class="text-2xl leading-[29px] mb-0.5">Emma Collins</h3>
+                                    <span class="relative block text-base leading-6">Homeowner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block group relative rtl:[direction:rtl] px-[29px] pt-[29px] pb-[29px] hover:pt-[269px] rounded-2xl bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)] border border-[rgba(102,98,94,0.10)] duration-500">
+                                <div class="absolute left-[29px] top-[29px] w-[calc(100%-58px)] rounded-[10px] h-[240px] bg-cover bg-no-repeat bg-center scale-y-0 group-hover:scale-y-100 origin-[top_center] duration-500" style="background-image: url(assets/images/resource/testimonial-2.jpg);"></div>
+                                <div class="group-hover:pt-6 duration-500">
+                                    <p class="text-[20px] leading-[30px] text-title-color dark:text-white mb-5">“Their design team redefined our workspace with elegance and functionality. The result perfectly captures our brand&apos;s identity and values.”</p>
+                                    <h3 class="text-2xl leading-[29px] mb-0.5">David Miller</h3>
+                                    <span class="relative block text-base leading-6">CEO, Nova Group</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block group relative rtl:[direction:rtl] px-[29px] pt-[29px] pb-[29px] hover:pt-[269px] rounded-2xl bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)] border border-[rgba(102,98,94,0.10)] duration-500">
+                                <div class="absolute left-[29px] top-[29px] w-[calc(100%-58px)] rounded-[10px] h-[240px] bg-cover bg-no-repeat bg-center scale-y-0 group-hover:scale-y-100 origin-[top_center] duration-500" style="background-image: url(assets/images/resource/testimonial-3.jpg);"></div>
+                                <div class="group-hover:pt-6 duration-500">
+                                    <p class="text-[20px] leading-[30px] text-title-color dark:text-white mb-5">“ArchioX approached our renovation with vision and precision. The blend of natural materials and open design completely transformed our space.”</p>
+                                    <h3 class="text-2xl leading-[29px] mb-0.5">Namrata Sarah</h3>
+                                    <span class="relative block text-base leading-6">Interior Client</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block group relative rtl:[direction:rtl] px-[29px] pt-[29px] pb-[29px] hover:pt-[269px] rounded-2xl bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)] border border-[rgba(102,98,94,0.10)] duration-500">
+                                <div class="absolute left-[29px] top-[29px] w-[calc(100%-58px)] rounded-[10px] h-[240px] bg-cover bg-no-repeat bg-center scale-y-0 group-hover:scale-y-100 origin-[top_center] duration-500" style="background-image: url(assets/images/resource/testimonial-1.jpg);"></div>
+                                <div class="group-hover:pt-6 duration-500">
+                                    <p class="text-[20px] leading-[30px] text-title-color dark:text-white mb-5">“ArchioX turned our dream home into a masterpiece. Every detail from layout to lighting reflects their dedication and creativity.”</p>
+                                    <h3 class="text-2xl leading-[29px] mb-0.5">Emma Collins</h3>
+                                    <span class="relative block text-base leading-6">Homeowner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block group relative rtl:[direction:rtl] px-[29px] pt-[29px] pb-[29px] hover:pt-[269px] rounded-2xl bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)] border border-[rgba(102,98,94,0.10)] duration-500">
+                                <div class="absolute left-[29px] top-[29px] w-[calc(100%-58px)] rounded-[10px] h-[240px] bg-cover bg-no-repeat bg-center scale-y-0 group-hover:scale-y-100 origin-[top_center] duration-500" style="background-image: url(assets/images/resource/testimonial-2.jpg);"></div>
+                                <div class="group-hover:pt-6 duration-500">
+                                    <p class="text-[20px] leading-[30px] text-title-color dark:text-white mb-5">“Their design team redefined our workspace with elegance and functionality. The result perfectly captures our brand&apos;s identity and values.”</p>
+                                    <h3 class="text-2xl leading-[29px] mb-0.5">David Miller</h3>
+                                    <span class="relative block text-base leading-6">CEO, Nova Group</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block group relative rtl:[direction:rtl] px-[29px] pt-[29px] pb-[29px] hover:pt-[269px] rounded-2xl bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)] border border-[rgba(102,98,94,0.10)] duration-500">
+                                <div class="absolute left-[29px] top-[29px] w-[calc(100%-58px)] rounded-[10px] h-[240px] bg-cover bg-no-repeat bg-center scale-y-0 group-hover:scale-y-100 origin-[top_center] duration-500" style="background-image: url(assets/images/resource/testimonial-3.jpg);"></div>
+                                <div class="group-hover:pt-6 duration-500">
+                                    <p class="text-[20px] leading-[30px] text-title-color dark:text-white mb-5">“ArchioX approached our renovation with vision and precision. The blend of natural materials and open design completely transformed our space.”</p>
+                                    <h3 class="text-2xl leading-[29px] mb-0.5">Namrata Sarah</h3>
+                                    <span class="relative block text-base leading-6">Interior Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonial-section end -->
+
+
+        <!-- team-section -->
+        <section class="team-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="sec-title mb-12 wow fadeUp text-center max-w-[850px] mx-auto">
+                    <h2 class="mb-3.5">Core teams</h2>
+                    <p class="text-2xl leading-9">At Terravia, our passionate team of architects and designers is dedicated to turning your visions into breathtaking spaces.</p>
+                </div>
+                <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-[30px]">
+                    <div class="team-block group relative rounded-2xl overflow-hidden wow fadeUp">
+                        <figure class="image relative rounded-2xl overflow-hidden"><a href="team-details.html"><img src="assets/images/team/team-1.jpg" alt="" class="w-full group-hover:transform group-hover:scale-110 duration-500 rounded-2xl"></a></figure>
+                        <div class="absolute w-[calc(100%-40px)] left-5 bottom-5 overflow-hidden block bg-white rounded-[10px] px-5 py-5 dark:bg-secondary-color group-hover:pb-[104px] duration-500 z-10">
+                            <h3 class="text-2xl leading-[29px] mb-0.5"><a href="team-details.html" class="hover:text-theme-color">Emma Collins</a></h3>
+                            <span class="block text-base leading-6 group-hover:mb-5">President of Sales</span>
+                            <p class="text-[14px] leading-[21px] pt-2.5 border-t border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.1)] duration-500 opacity-0 group-hover:opacity-100 w-[calc(100%-40px)] left-5 bottom-5">As both CEO and COO, Emma Collins drives Terravia forward through strategic vision and a passion for impactful design.</p>
+                        </div>
+                    </div>
+                    <div class="team-block group relative rounded-2xl overflow-hidden wow fadeUp delay-1">
+                        <figure class="image relative rounded-2xl overflow-hidden"><a href="team-details.html"><img src="assets/images/team/team-2.jpg" alt="" class="w-full group-hover:transform group-hover:scale-110 duration-500 rounded-2xl"></a></figure>
+                        <div class="absolute w-[calc(100%-40px)] left-5 bottom-5 overflow-hidden block bg-white rounded-[10px] px-5 py-5 dark:bg-secondary-color group-hover:pb-[104px] duration-500 z-10">
+                            <h3 class="text-2xl leading-[29px] mb-0.5"><a href="team-details.html" class="hover:text-theme-color">David Miller</a></h3>
+                            <span class="block text-base leading-6 group-hover:mb-5">Web Designer</span>
+                            <p class="text-[14px] leading-[21px] pt-2.5 border-t border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.1)] duration-500 opacity-0 group-hover:opacity-100 w-[calc(100%-40px)] left-5 bottom-5">As both CEO and COO, Emma Collins drives Terravia forward through strategic vision and a passion for impactful design.</p>
+                        </div>
+                    </div>
+                    <div class="team-block group relative rounded-2xl overflow-hidden wow fadeUp delay-2">
+                        <figure class="image relative rounded-2xl overflow-hidden"><a href="team-details.html"><img src="assets/images/team/team-3.jpg" alt="" class="w-full group-hover:transform group-hover:scale-110 duration-500 rounded-2xl"></a></figure>
+                        <div class="absolute w-[calc(100%-40px)] left-5 bottom-5 overflow-hidden block bg-white rounded-[10px] px-5 py-5 dark:bg-secondary-color group-hover:pb-[104px] duration-500 z-10">
+                            <h3 class="text-2xl leading-[29px] mb-0.5"><a href="team-details.html" class="hover:text-theme-color">Namrata Sarah</a></h3>
+                            <span class="block text-base leading-6 group-hover:mb-5">Nursing Assistant</span>
+                            <p class="text-[14px] leading-[21px] pt-2.5 border-t border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.1)] duration-500 opacity-0 group-hover:opacity-100 w-[calc(100%-40px)] left-5 bottom-5">As both CEO and COO, Emma Collins drives Terravia forward through strategic vision and a passion for impactful design.</p>
+                        </div>
+                    </div>
+                    <div class="team-block group relative rounded-2xl overflow-hidden wow fadeUp delay-3">
+                        <figure class="image relative rounded-2xl overflow-hidden"><a href="team-details.html"><img src="assets/images/team/team-4.jpg" alt="" class="w-full group-hover:transform group-hover:scale-110 duration-500 rounded-2xl"></a></figure>
+                        <div class="absolute w-[calc(100%-40px)] left-5 bottom-5 overflow-hidden block bg-white rounded-[10px] px-5 py-5 dark:bg-secondary-color group-hover:pb-[104px] duration-500 z-10">
+                            <h3 class="text-2xl leading-[29px] mb-0.5"><a href="team-details.html" class="hover:text-theme-color">Frod Miller</a></h3>
+                            <span class="block text-base leading-6 group-hover:mb-5">Marketing Coordinator</span>
+                            <p class="text-[14px] leading-[21px] pt-2.5 border-t border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.1)] duration-500 opacity-0 group-hover:opacity-100 w-[calc(100%-40px)] left-5 bottom-5">As both CEO and COO, Emma Collins drives Terravia forward through strategic vision and a passion for impactful design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- team-section end -->
+
+
+        <!-- project-three -->
+        <section class="project-three sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="sec-title mb-12 wow fadeUp sm:flex items-end justify-between">
+                    <h2 class="sm:mb-0 mb-3.5">Architecture Feels Like Home</h2>
+                    <a href="project.html" class="theme-btn secondary-btn"><span class="btn-text"><span>View Full Gallery</span></span></a>
+                </div>
+                <div class="single-item-carousel relative wow fadeUp rtl:[direction:ltr]">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="image block rounded-3xl overflow-hidden"><img src="assets/images/project/project-10.jpg" alt="" class="w-full hover:transform hover:scale-110 hover:rotate-3 duration-500"></figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="image block rounded-3xl overflow-hidden"><img src="assets/images/project/project-20.jpg" alt="" class="w-full hover:transform hover:scale-110 hover:rotate-3 duration-500"></figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="image block rounded-3xl overflow-hidden"><img src="assets/images/project/project-21.jpg" alt="" class="w-full hover:transform hover:scale-110 hover:rotate-3 duration-500"></figure>
+                        </div>
+                    </div>
+                    <div class="swiper-nav absolute flex items-center justify-between left-[30px] bottom-[30px] w-[calc(100%-60px)] z-50 rounded-3xl border border-[rgba(255,255,255,0.30)] bg-[linear-gradient(90deg,rgba(255,255,255,0.2)_0%,rgba(255,255,255,0.1)_100%)] backdrop-blur-[24px] px-5 py-3.5">
+                        <div class="swiper-prev group relative flex items-center justify-center w-[37px] h-[37px] leading-[37px] rounded-2xl text-center border border-[rgba(255,255,255,0.40)] hover:border-white duration-500 cursor-pointer">
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.47205 14.3843C7.47205 14.3843 0.500046 9.60028 0.500046 7.44028C0.500046 5.28028 7.47205 0.500278 7.47205 0.500278" stroke="white" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 duration-500 group-hover:opacity-100"/>
+                            </svg>
+                        </div>
+                        <div class="swiper-next group relative flex items-center justify-center w-[37px] h-[37px] leading-[37px] rounded-2xl text-center border border-[rgba(255,255,255,0.40)] hover:border-white duration-500 cursor-pointer">
+                            <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 14.3843C0.5 14.3843 7.472 9.60028 7.472 7.44028C7.472 5.28028 0.5 0.500278 0.5 0.500278" stroke="white" stroke-linecap="round" stroke-linejoin="round" class="opacity-40 duration-500 group-hover:opacity-100"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- project-three end -->
+
+
+        <!-- faq-section -->
+        <section class="faq-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 bg-secondary-color rounded-3xl overflow-hidden px-[30px] py-[30px] dark:bg-[rgba(255,255,255,0.05)]">
+                    <div class="md:col-span-4 wow fadeUp lg:mb-0 mb-6">
+                        <div class="sec-title light">
+                            <h2>FAQs</h2>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8 wow fadeUp">
+                        <ul class="accordion-box">
+                            <li class="accordion block active-block rounded-2xl overflow-hidden bg-[#202020] mb-2.5">
+                                <div class="acc-btn relative active px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">What types of projects do you specialize in?</h3>
+                                </div>
+                                <div class="acc-content current">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="text-[rgba(255,252,250,0.70)] text-[20px] leading-8">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#202020] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">What types of projects do you specialize in?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="text-[rgba(255,252,250,0.70)] text-[20px] leading-8">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#202020] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Do you handle both design and construction?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="text-[rgba(255,252,250,0.70)] text-[20px] leading-8">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#202020] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Can you design eco-friendly or sustainable buildings?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="text-[rgba(255,252,250,0.70)] text-[20px] leading-8">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#202020] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">What information do I need to start a project?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="text-[rgba(255,252,250,0.70)] text-[20px] leading-8">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- faq-section end -->
+
+
+        <!-- main-footer -->
+        <footer class="main-footer bg-bg-color-1 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="max-w-[1410px] w-full mx-auto px-[15px]">
+                <div class="sm:pt-[100px] pb-20 pt-20 border-b border-[rgba(102,98,94,0.08)] dark:border-[rgba(255,255,255,0.1)] wow fadeUp">
+                    <div class="sm:flex block items-center justify-between gap-7">
+                        <div class="sm:mb-0 mb-6">
+                            <figure class="footer-logo relative mb-10 dark:hidden"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                            <figure class="footer-logo relative mb-10 hidden dark:block"><a href="index.html"><img src="assets/images/logo-2.png" alt=""></a></figure>
+                            <ul class="sm:flex block items-center gap-6">
+                                <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Home</a></li>
+                                <li><a href="about.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">About Us</a></li>
+                                <li><a href="project.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Projects</a></li>
+                                <li><a href="service.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Services</a></li>
+                                <li><a href="blog.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Blog</a></li>
+                                <li><a href="contact.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <ul class="social-card flex items-center justify-center xs:gap-10 gap-2 bg-theme-color rounded-2xl px-7 py-5">
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Instagram</a></li>
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Linkedin</a></li>
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Youtube</a></li>
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sm:flex items-center justify-between gap-7 py-6 wow fadeUp text-center">
+                    <ul class="flex items-center justify-center sm:gap-6 gap-1">
+                        <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color sm:text-[14px] text-[12px] leading-[21px]">Privacy Policy</a></li>
+                        <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color sm:text-[14px] text-[12px] leading-[21px]">Terms of Service</a></li>
+                        <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color sm:text-[14px] text-[12px] leading-[21px]">Cookies Settings</a></li>
+                    </ul>
+                    <p class="sm:text-[14px] text-[12px] leading-[21px]">&copy; copy 2026 <a href="index.html" class="hover:text-theme-color">Archiox</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- main-footer end -->
+
+        
+        <!-- scroll to top -->
+        <div class="ax-back-to-top"><span class="ax-back-to-top-percentage"></span></div>
+        
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/SplitText.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/odometer.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="assets/js/marquee.min.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+
+</body><!-- End of .page_wrapper -->
+</html>

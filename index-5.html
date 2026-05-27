@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Archiox - HTML 5 Template Preview</title>
+<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="src/output.css">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+
+        <!-- preloader -->
+        <div id="preloader" class="fixed inset-0 bg-white z-[99999999] flex items-center justify-center">
+            <div class="text-center">
+                <div class="w-24 h-24 border-4 border-secondary-color border-t-white rounded-full animate-spin mx-auto mb-4"></div>
+                <p id="preloader-text" class="text-xl font-semibold text-title-color">0%</p>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+
+        <!-- rtl toggle switch -->
+        <button id="rtlToggle" class="fixed top-1/2 left-0 z-[999] mt-[-40px] flex items-center justify-center h-8 w-8 leading-8 text-center bg-theme-color cursor-pointer text-[14px] text-white font-medium uppercase"><span class="inline-block rtl:hidden">RTL</span><span class="hidden rtl:inline-block">Ltr</span></button>
+        <!-- rtl toggle switch end -->
+
+        
+        <!-- dark-mode-switch -->
+        <div class="mode-switch fixed top-1/2 left-0 z-[999]">
+            <button id="darkToggle" class="relative flex items-center justify-center h-8 w-8 leading-8 text-center bg-theme-color cursor-pointer">
+                <svg class="w-5 h-5 dark:hidden" fill="#fff" stroke-linejoin="round" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 0.25V1V1.5H11L11.75 1.5V3H11H10.5V3.5V4.25H9V3.5V3H8.5H7.75V1.5H8.5H9V1V0.25H10.5ZM3.25514 2.75496C2.33413 3.53491 1.75 4.69972 1.75 6C1.75 8.34721 3.65279 10.25 6 10.25C7.30029 10.25 8.4651 9.66587 9.24505 8.74485C9.16377 8.74827 9.08207 8.74999 9 8.74999C5.82436 8.74999 3.25 6.17563 3.25 2.99999C3.25 2.91792 3.25172 2.83623 3.25514 2.75496ZM0.25 6C0.25 3.51072 1.83142 1.39271 4.042 0.592193L5.00256 1.55275C4.83933 2.00347 4.75 2.49047 4.75 2.99999C4.75 5.3472 6.65279 7.24999 9 7.24999C9.50953 7.24999 9.99653 7.16065 10.4473 6.99743L11.4078 7.95798C10.6073 10.1686 8.48929 11.75 6 11.75C2.82436 11.75 0.25 9.17564 0.25 6Z" fill="#fff" transform="translate(2.25, 2.25)"></path>
+                </svg>
+
+                <svg class="w-5 h-5 hidden dark:inline-block" fill="#000" viewBox="0 0 16 16" data-testid="light-icon" stroke-linejoin="round">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 1V0.25H6.25V1V1.25V2H7.75V1.25V1ZM7 9C8.10457 9 9 8.10457 9 7C9 5.89543 8.10457 5 7 5C5.89543 5 5 5.89543 5 7C5 8.10457 5.89543 9 7 9ZM7 10.5C8.933 10.5 10.5 8.933 10.5 7C10.5 5.067 8.933 3.5 7 3.5C5.067 3.5 3.5 5.067 3.5 7C3.5 8.933 5.067 10.5 7 10.5ZM7.75 12V12.75V13V13.75H6.25V13V12.75V12H7.75ZM12 6.25H12.75H13H13.75V7.75H13H12.75H12V6.25ZM1 6.25H0.25V7.75H1H1.25H2V6.25H1.25H1ZM10.0052 2.93414L10.5355 2.40381L10.7123 2.22703L11.2426 1.6967L12.3033 2.75736L11.773 3.28769L11.5962 3.46447L11.0659 3.9948L10.0052 2.93414ZM2.22703 10.7123L1.6967 11.2426L2.75736 12.3033L3.28769 11.773L3.46447 11.5962L3.9948 11.0659L2.93414 10.0052L2.40381 10.5355L2.22703 10.7123ZM2.93414 3.9948L2.40381 3.46447L2.22703 3.28769L1.6967 2.75736L2.75736 1.6967L3.28769 2.22703L3.46447 2.40381L3.9948 2.93414L2.93414 3.9948ZM10.7123 11.773L11.2426 12.3033L12.3033 11.2426L11.773 10.7123L11.5962 10.5355L11.0659 10.0052L10.0052 11.0659L10.5355 11.5962L10.7123 11.773Z" fill="#fff" transform="translate(1.25, 1.25)"></path>
+                </svg>
+            </button>
+        </div>
+
+
+        <!-- main header -->
+        <header class="main-header relative w-full z-99999 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+
+            <div class="header-lower relativew-full pt-5 pb-5">
+                <div class="container-layout">
+                    <div class="relative flex items-center justify-between">  
+                        <div class="header-logo">
+                            <figure class="logo-box flex dark:hidden">
+                                <a href="index.html" class="relative inline-block"><img src="assets/images/logo.png" alt=""></a>
+                            </figure>
+                            <figure class="logo-box hidden dark:flex">
+                                <a href="index.html" class="relative inline-block"><img src="assets/images/logo-2.png" alt=""></a>
+                            </figure>
+                        </div>
+                        <div class="menu-area">
+                            <!--Mobile Navigation Toggler-->
+                            <div class="mobile-nav-toggler relative md:hidden w-[50px] block p-[10px] h-[36px] cursor-pointer">
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light hidden md:block">
+                                <div class="navbar-collapse show clearfix">
+                                    <ul class="navigation sm:flex items-center">
+                                    
+                                        <li class="dropdown md:inline-block group">
+                                            <a href="#" class="nav-link current">Home</a>
+                                            <div class="megamenu w-full px-10 py-[50px] pb-2.5 left-0 flex items-center justify-center gap-[30px]">
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index.html"><img src="assets/images/resource/menu-1.jpg" alt=""></a></div>
+                                                    <h4><a href="index.html">Home Page 01</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-2.html"><img src="assets/images/resource/menu-2.jpg" alt=""></a></div>
+                                                    <h4><a href="index-2.html">Home Page 02</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-3.html"><img src="assets/images/resource/menu-3.jpg" alt=""></a></div>
+                                                    <h4><a href="index-3.html">Home Page 03</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-4.html"><img src="assets/images/resource/menu-4.jpg" alt=""></a></div>
+                                                    <h4><a href="index-4.html">Home Page 04</a></h4>
+                                                </div>
+                                                <div class="single-item">
+                                                    <div class="image-box"><a href="index-5.html"><img src="assets/images/resource/menu-5.jpg" alt=""></a></div>
+                                                    <h4><a href="index-5.html">Home Page 05</a></h4>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="dropdown sm:inline-block relative group">
+                                            <a href="#" class="nav-link">About Us</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about.html" class="sub-menu-link">About Us</a></li>
+                                                <li><a href="testimonials.html" class="sub-menu-link">Testimonials</a></li>
+                                                <li><a href="project.html" class="sub-menu-link">Our Projects</a></li>
+                                                <li><a href="error.html" class="sub-menu-link">404</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown lg:inline-block relative group">
+                                            <a href="#" class="nav-link">Team</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="team.html" class="sub-menu-link">Core teams</a></li>
+                                                <li><a href="team-details.html" class="sub-menu-link">Team Details</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown lg:inline-block relative group">
+                                            <a href="#" class="nav-link">Services</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="service.html" class="sub-menu-link">Our Services</a></li>
+                                                <li><a href="service-details.html" class="sub-menu-link">Service Details</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown lg:inline-block relative group">
+                                            <a href="#" class="nav-link">Blog</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog.html" class="sub-menu-link">Blog Grid</a></li>
+                                                <li><a href="blog-2.html" class="sub-menu-link">Blog Grid Sidebar</a></li>
+                                                <li><a href="blog-3.html" class="sub-menu-link">Blog Standard</a></li>
+                                                <li><a href="blog-4.html" class="sub-menu-link">Blog Standard Sidebar</a></li>
+                                                <li><a href="blog-details.html" class="sub-menu-link">Blog Details</a></li>
+                                                <li><a href="blog-details-2.html" class="sub-menu-link">Blog Details Sidebar</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="lg:inline-block">
+                                            <a href="contact.html" class="nav-link">Contact Us</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="menu-right-content relative sm:block hidden">
+                            <div class="btn-box"><a href="index.html" class="theme-btn secondary-btn px-5 py-[7px]"><span class="btn-text"><span>Get started</span></span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- sticky-header -->
+            <div class="sticky-header">
+                <div class="container-layout">
+                    <div class="relative flex items-center justify-between pt-3.5 pb-3.5">
+                        <figure class="logo-box block dark:hidden relative xl:pt-0 pt-[15px] xl:pb-0 pb-[15px]">
+                            <a href="index.html" class="relative inline-block"><img src="assets/images/logo.png" alt=""></a>
+                        </figure>
+                        <figure class="logo-box hidden dark:block relative xl:pt-0 pt-[15px] xl:pb-0 pb-[15px]">
+                            <a href="index.html" class="relative inline-block"><img src="assets/images/logo-2.png" alt=""></a>
+                        </figure>
+                        <div class="menu-area">
+                            <div class="mobile-nav-toggler relative md:hidden w-[50px] block p-[10px] h-[36px] cursor-pointer">
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                                <span class="relative block h-0.5 w-[30px] mb-1.5 bg-theme-color"></span>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light hidden md:block">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </nav>
+                        </div>
+                        <div class="menu-right-content relative sm:block hidden">
+                            <div class="btn-box"><a href="index.html" class="theme-btn secondary-btn px-5 py-[7px]"><span class="btn-text"><span>Get started</span></span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main-header end -->
+
+        
+        <!-- mobile-menu -->
+        <div class="mobile-menu [.mobile-menu-visible_&]:opacity-100 [.mobile-menu-visible_&]:visible fixed right-0 top-0 w-96 pr-[30px] max-w-full h-full opacity-0 invisible z-[999999] duration-700" data-lenis-prevent="true">
+            <div class="menu-backdrop fixed left-0 top-0 rtl:left-[inherit] rtl:right-0 w-full pr-[30px] max-w-full h-full z-10 bg-black duration-700 transition-all [.mobile-menu-visible_&]:opacity-70 [.mobile-menu-visible_&]:visible [.mobile-menu-visible_&]:right-full [.mobile-menu-visible_&]:ease-out rtl:[.mobile-menu-visible_&]:right-0"></div>
+            <nav class="menu-box absolute pt-7 left-0 top-0 w-full h-full max-h-full overflow-y-auto bg-secondary-color z-50 opacity-0 invisible duration-700 transition-all ease-in-out translate-x-full [.mobile-menu-visible_&]:opacity-100 [.mobile-menu-visible_&]:visible [.mobile-menu-visible_&]:translate-x-0">
+                
+                <div class="mobile-menu-logo flex items-center justify-between relative pt-3 pb-16 pl-7 pr-7">
+                    <a href="index.html"><img src="assets/images/logo-2.png" alt="" title=""></a>
+                    <div class="close-btn z-[99] text-white text-2xl cursor-pointer hover:text-theme-color duration-500">X</div>
+                </div>
+
+                <div class="menu-inner">
+                    <ul class="relative block w-full border-b border-[rgba(255,255,255,0.1)]">
+                        <!-- home -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative current block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13  ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Home</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 01</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index-2.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 02</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index-3.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 03</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="index-4.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 04</a></li>
+                                <li class="relative current block border-t border-[rgba(255,255,255,0.1)]"><a href="index-5.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Home Page 05</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- about-->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">About Us</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="about.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">About Us</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="testimonials.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Testimonials</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="project.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Our Project</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="error.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">404</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- team -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Team</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="team.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Core teams</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="team-details.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Team Details</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- services -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Services</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="service.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Our Services</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="service-details.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Service Details</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- blog -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="#" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in before:absolute before:left-0 before:top-0 before:w-1 before:bg-white [&.current]:before:bg-theme-color before: before:ease-linear before:h-0 [&.current]:before:h-full before:content-['']">Blog</a>
+                            <ul class="hidden">
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Grid</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-2.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Grid Sidebar</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-3.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Standard</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-4.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Standard Sidebar</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-details.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Details</a></li>
+                                <li class="relative block border-t border-[rgba(255,255,255,0.1)]"><a href="blog-details-2.html" class="relative block text-base leading-6 p-2.5 pb-2.5 pl-6 pr-6 ml-5 text-white rtl:pr-16 hover:text-theme-color [.current_&]:text-theme-color">Blog Details Sidebar</a></li>
+                            </ul>
+                            <div class="dropdown-btn absolute right-1.5 top-2 w-8 h-8 leading-9 text-center bg-[rgba(255,255,255,0.10)] rounded-[2px] text-white text-[12px] duration-500 ease-linear cursor-pointer rotate-[-90deg] [&.open]:rotate-0"><i class="icon-1"></i></div>
+                        </li>
+
+                        <!-- contact -->
+                        <li class="dropdown relative block border-t border-[rgba(255,255,255,0.1)]"><a href="contact.html" class="relative block text-base leading-7 text-white [&.current]:text-theme-color font-medium capitalize pt-2.5 pb-2.5 pl-6 pr-6 rtl:pr-13 ease-in">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- contact-info -->
+                <div class="contact-info relative pt-28 pb-7 pl-7 pr-7">
+                    <h4 class="text-[20px] leading-7 font-bold text-white mb-5">Contact Info</h4>
+                    <ul>
+                        <li class="mb-3 block text-white opacity-80">Chicago 12, Melborne City, USA</li>
+                        <li class="mb-3 block"><a href="tel:+8801682648101" class="inline-block text-white opacity-80 hover:text-theme-color ">+88 01682648101</a></li>
+                        <li class="block"><a href="mailto:info@example.com" class="inline-block text-white opacity-80 hover:text-theme-color ">info@example.com</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- mobile-menu end -->
+
+
+        <!-- banner-five -->
+        <section class="banner-five relative overflow-hidden py-[30px] bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="bg-image rtl:left-0 rtl:right-[inherit] sm:block hidden absolute top-0 right-0 w-1/2 h-full bg-cover bg-no-repeat bg-center rounded-tl-[24px] rtl:rounded-tl-[0px] rtl:rounded-tr-[24px] rounded-bl-[24px] rtl:rounded-bl-[0px] rtl:rounded-br-[24px] overflow-hidden before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-[linear-gradient(180deg,rgba(26,26,26,0)_0%,rgba(26,26,26,0.9)_100%)]" style="background-image: url(assets/images/banner/banner-5.jpg);"></div>
+            <div class="container-layout">
+                <div class="grid sm:grid-cols-2 gap-[30px] items-end">
+                    <div class="relative">
+                        <h2 class="sm:text-[56px] sm:leading-[67px] text-4xl leading-11 mb-12">Where innovative architecture meets refined living.</h2>
+                        <div class="sm:mb-[259px] mb-10">
+                            <a href="index-5.html" class="theme-btn secondary-btn xs:mb-0 mb-2.5"><span class="btn-text"><span>Explore Expertise</span></span></a>
+                        </div>
+                        <div class="image-inner group max-w-[400px] w-full relative">
+                            <video class="w-full h-full overflow-hidden rounded-[20px]" autoplay muted loop id="promo-video">
+                                <source src="assets/video-2.mp4" type="video/mp4" />
+                                <track src="captions/promo-captions.vtt" kind="captions" srclang="en" label="English"/>
+                            </video>
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100">
+                                <a href="project.html" class="theme-btn secondary-btn xs:mb-0 mb-2.5"><span class="btn-text"><span>View Project</span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text relative z-100 sm:pl-[15px] rtl:sm:pl-0 rtl:sm:pr-[15px]">
+                        <p class="sm:text-white">We blend interior design, architecture, and furniture into seamless harmony. Each detail is shaped to inspire the way you live.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner-five end -->
+
+
+        <!-- about-section -->
+        <section class="about-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="container-layout">
+                <div class="sec-title text-center max-w-[770px] mx-auto mb-12 wow fadeUp">
+                    <span class="sub-title mb-3">About us</span>
+                    <h3 class="mb-12 text-[32px] leading-[38px]">At ArchioX, we merge bold architectural design with interiors that flow in flawless harmony.</h3>
+                    <a href="about.html" class="theme-btn primary-btn xs:mr-0 mr-1.5 xs:mb-0 mb-2.5"><span class="btn-text"><span>Learn More</span></span></a>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-[30px]">
+                    <div class="relative group wow fadeUp">
+                        <figure class="image-box overflow-hidden rounded-[10px] mb-2.5"><img src="assets/images/resource/about-2.jpg" alt="" class="w-full duration-500 group-hover:scale-110 group-hover:rotate-3"></figure>
+                        <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl px-5 py-5">
+                            <div class="count-box flex items-center gap-1 overflow-hidden text-[64px] leading-[77px] text-title-color dark:text-white mb-2"><span>20</span><span class="odometer" data-count="12">00</span></div>
+                            <p class="text-base leading-6">Year of establishment</p>
+                        </div>
+                    </div>
+                    <div class="relative group md:mt-[200px] wow fadeUp delay-1">
+                        <figure class="image-box overflow-hidden rounded-[10px] mb-2.5"><img src="assets/images/resource/about-3.jpg" alt="" class="w-full duration-500 group-hover:scale-110 group-hover:rotate-3"></figure>
+                        <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl px-5 py-5">
+                            <div class="count-box flex items-center gap-1 overflow-hidden text-[64px] leading-[77px] text-title-color dark:text-white mb-2"><span class="odometer" data-count="320">00</span><span>+</span></div>
+                            <p class="text-base leading-6">Projects Completed</p>
+                        </div>
+                    </div>
+                    <div class="relative group wow fadeUp delay-2">
+                        <figure class="image-box overflow-hidden rounded-[10px] mb-2.5"><img src="assets/images/resource/about-4.jpg" alt="" class="w-full duration-500 group-hover:scale-110 group-hover:rotate-3"></figure>
+                        <div class="bg-white dark:bg-[rgba(255,255,255,0.05)] rounded-2xl px-5 py-5">
+                            <div class="count-box flex items-center gap-1 overflow-hidden text-[64px] leading-[77px] text-title-color dark:text-white mb-2"><span class="odometer" data-count="200">00</span><span>+</span></div>
+                            <p class="text-base leading-6">Satisfied Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-section end -->
+
+
+        <!-- project-section -->
+        <section class="project-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17">
+            <div class="container-layout">
+                <div class="sec-title text-center max-w-[770px] mx-auto mb-12 wow fadeUp">
+                    <span class="sub-title mb-3">Projects</span>
+                    <h2 class="mb-12">Exploring Spaces That Speak for Themselves</h2>
+                    <a href="about.html" class="theme-btn primary-btn xs:mr-0 mr-1.5 xs:mb-0 mb-2.5"><span class="btn-text"><span>Learn More</span></span></a>
+                </div>
+                <div class="slidebar-stickiy-container">
+                    <div class="grid md:grid-cols-2 gap-[30px] mb-[30px]">
+                        <div class="project-block group bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] rounded-2xl px-5 py-5">
+                            <div class="slidebar-stickiy rtl-sticky-fix">
+                                <figure class="image-box rounded-[10px] overflow-hidden"><img src="assets/images/project/project-16.jpg" alt="" class="w-full duration-500 group-hover:scale-110 group-hover:rotate-3"></figure>
+                                <div class="pt-5 pb-[30px]">
+                                    <h3 class="text-[32px] leading-[38px] mb-3"><a href="index-5.html" class="hover:text-theme-color">Meridian Workspace</a></h3>
+                                    <div class="text sm:flex justify-between">
+                                        <span class="block text-base leading-6">Commercial Interior Design</span>
+                                        <span class="block text-[14px] leading-[21px]">2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block group bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] rounded-2xl px-5 py-5 md:mt-[660px]">
+                            <figure class="image-box rounded-[10px] overflow-hidden"><img src="assets/images/project/project-17.jpg" alt="" class="w-full duration-500 group-hover:scale-110 group-hover:rotate-3"></figure>
+                            <div class="pt-5 pb-2.5">
+                                <h3 class="text-[32px] leading-[38px] mb-3"><a href="index-5.html" class="hover:text-theme-color">Terra Forma</a></h3>
+                                <div class="text sm:flex justify-between">
+                                    <span class="block text-base leading-6">Luxury Furniture Design</span>
+                                    <span class="block text-[14px] leading-[21px]">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slidebar-stickiy-container">
+                    <div class="grid md:grid-cols-2 gap-[30px]">
+                        <div class="project-block group bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] rounded-2xl px-5 py-5">
+                            <div class="slidebar-stickiy rtl-sticky-fix">
+                                <figure class="image-box rounded-[10px] overflow-hidden"><img src="assets/images/project/project-18.jpg" alt="" class="w-full duration-500 group-hover:scale-110 group-hover:rotate-3"></figure>
+                                <div class="pt-5 pb-[30px]">
+                                    <h3 class="text-[32px] leading-[38px] mb-3"><a href="index-5.html" class="hover:text-theme-color">Serene Living</a></h3>
+                                    <div class="text sm:flex justify-between">
+                                        <span class="block text-base leading-6">Residetial Interior Design</span>
+                                        <span class="block text-[14px] leading-[21px]">2025</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-block group bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] rounded-2xl px-5 py-5 md:mt-[660px]">
+                            <figure class="image-box rounded-[10px] overflow-hidden"><img src="assets/images/project/project-19.jpg" alt="" class="w-full duration-500 group-hover:scale-110 group-hover:rotate-3"></figure>
+                            <div class="pt-5 pb-2.5">
+                                <h3 class="text-[32px] leading-[38px] mb-3"><a href="index-5.html" class="hover:text-theme-color">Línea Studio</a></h3>
+                                <div class="text sm:flex justify-between">
+                                    <span class="block text-base leading-6">Work interior Design</span>
+                                    <span class="block text-[14px] leading-[21px]">2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- project-section end -->
+
+
+        <!-- section -->
+        <section class="sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="container-layout">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-[60px] items-center">
+                    <div class="lg:col-span-5">
+                        <div class="sec-title mb-12 wow fadeUp">
+                            <span class="sub-title mb-3">Our Expertise</span>
+                            <h2>Where Architectur Vision Becomes Reality</h2>
+                        </div>
+                        <figure class="image-box rounded-[12px] overflow-hidden wow fadeUp"><img src="assets/images/resource/about-5.jpg" alt="" class="w-full duration-500 hover:scale-110"></figure>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <ul class="accordion-box two wow fadeUp">
+                            <li class="accordion block border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">
+                                <div class="acc-btn relative py-5 pr-16 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Space Planning</h3>
+                                </div>
+                                <div class="acc-content pb-6">
+                                    <div class="text mb-4">
+                                        <p class="text-base leading-6">Designing structural layouts and flow with precision, ensuring every space is both functional and visually captivating.</p>
+                                    </div>
+                                    <div class="grid sm:grid-cols-2 gap-10 items-center">
+                                        <figure class="image-box rounded-[20px] overflow-hidden"><img src="assets/images/resource/about-6.jpg" class="w-full" alt=""></figure>
+                                        <ul class="list-item">
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Conceptualizing floor plans</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Designing structural elements</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Integrating architectural features</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Coordinating with builders</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Ensuring designs comply</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block active-block border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">
+                                <div class="acc-btn relative active py-5 pr-16 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Interior Architecture</h3>
+                                </div>
+                                <div class="acc-content current pb-6">
+                                    <div class="text mb-4">
+                                        <p class="text-base leading-6">Designing structural layouts and flow with precision, ensuring every space is both functional and visually captivating.</p>
+                                    </div>
+                                    <div class="grid sm:grid-cols-2 gap-10 items-center">
+                                        <figure class="image-box rounded-[20px] overflow-hidden"><img src="assets/images/resource/about-7.jpg" class="w-full" alt=""></figure>
+                                        <ul class="list-item">
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Conceptualizing floor plans</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Designing structural elements</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Integrating architectural features</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Coordinating with builders</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Ensuring designs comply</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">
+                                <div class="acc-btn relative py-5 pr-16 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Material & Finish Selection</h3>
+                                </div>
+                                <div class="acc-content pb-6">
+                                    <div class="text mb-4">
+                                        <p class="text-base leading-6">Designing structural layouts and flow with precision, ensuring every space is both functional and visually captivating.</p>
+                                    </div>
+                                    <div class="grid sm:grid-cols-2 gap-10 items-center">
+                                        <figure class="image-box rounded-[20px] overflow-hidden"><img src="assets/images/resource/about-8.jpg" class="w-full" alt=""></figure>
+                                        <ul class="list-item">
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Conceptualizing floor plans</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Designing structural elements</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Integrating architectural features</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Coordinating with builders</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Ensuring designs comply</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">
+                                <div class="acc-btn relative py-5 pr-16 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Lighting Design</h3>
+                                </div>
+                                <div class="acc-content pb-6">
+                                    <div class="text mb-4">
+                                        <p class="text-base leading-6">Designing structural layouts and flow with precision, ensuring every space is both functional and visually captivating.</p>
+                                    </div>
+                                    <div class="grid sm:grid-cols-2 gap-10 items-center">
+                                        <figure class="image-box rounded-[20px] overflow-hidden"><img src="assets/images/resource/about-9.jpg" class="w-full" alt=""></figure>
+                                        <ul class="list-item">
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Conceptualizing floor plans</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Designing structural elements</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Integrating architectural features</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Coordinating with builders</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Ensuring designs comply</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">
+                                <div class="acc-btn relative py-5 pr-16 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Sustainable Design Solutions</h3>
+                                </div>
+                                <div class="acc-content pb-6">
+                                    <div class="text mb-4">
+                                        <p class="text-base leading-6">Designing structural layouts and flow with precision, ensuring every space is both functional and visually captivating.</p>
+                                    </div>
+                                    <div class="grid sm:grid-cols-2 gap-10 items-center">
+                                        <figure class="image-box rounded-[20px] overflow-hidden"><img src="assets/images/resource/about-10.jpg" class="w-full" alt=""></figure>
+                                        <ul class="list-item">
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Conceptualizing floor plans</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Designing structural elements</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Integrating architectural features</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Coordinating with builders</li>
+                                            <li class="text-[20px] leading-[30px] py-[15px] border-b border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.05)]">Ensuring designs comply</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section end -->
+
+
+        <!-- choose-section -->
+        <section class="choose-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17">
+            <div class="container-layout">
+                <div class="sec-title mb-12 wow fadeUp text-center">
+                    <span class="sub-title mb-3">Why Choose us</span>
+                    <h2>Why Estancia Stands Apart</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-[30px]">
+                    <div class="md:col-span-3">
+                        <div class="relative mb-[30px] wow fadeUp ">
+                            <figure class="image-box rounded-3xl overflow-hidden"><img src="assets/images/resource/choose-1.jpg" class="w-full" alt=""></figure>
+                            <div class="logo absolute left-1/2 top-1/2 z-100 -translate-x-1/2 -translate-y-1/2"><img src="assets/images/logo.png" alt=""></div>
+                        </div>
+                        <div class="bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] rounded-3xl px-5 py-5 wow fadeUp ">
+                            <ul class="flex items-center gap-1 mb-[92px]">
+                                <li><img src="assets/images/icons/icon-17.svg" alt=""></li>
+                                <li><img src="assets/images/icons/icon-17.svg" alt=""></li>
+                                <li><img src="assets/images/icons/icon-17.svg" alt=""></li>
+                                <li><img src="assets/images/icons/icon-17.svg" alt=""></li>
+                                <li><img src="assets/images/icons/icon-17.svg" alt=""></li>
+                            </ul>
+                            <h3 class="text-2xl leading-[29px] mb-3">Precision in Design</h3>
+                            <p class="text-title-color dark:text-white">Our team&apos;s expertise ensures professionalism and reliability, making your real estate journey seamless.</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-6">
+                        <div class="relative rounded-3xl overflow-hidden px-[30px] py-[30px] pt-[309px] wow fadeUp ">
+                            <div class="bg-image absolute left-0 top-0 w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url(assets/images/resource/choose-2.jpg);"></div>
+                            <div class="relative px-5 py-5 rounded-[14px] text-center backdrop-blur-[50px] bg-[linear-gradient(99.78deg,rgba(255,255,255,0.06)_0.76%,rgba(255,255,255,0.02)_100%)]">
+                                <div class="mb-3 inline-block"><img src="assets/images/logo-2.png" alt=""></div>
+                                <h3 class="text-[56px] leading-[67px] text-white mb-3.5 light-title">ArchioX Design Solutions</h3>
+                                <p class="text-white">ArchioX unites modern aesthetics, innovative technology, and inviting shared spaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3">
+                        <div class="relative overflow-hidden rounded-3xl px-5 py-5 wow fadeUp delay-1">
+                            <div class="bg-image absolute left-0 top-0 w-full h-full bg-cover bg-no-repeat bg-center" style="background-image: url(assets/images/resource/choose-3.jpg);"></div>
+                            <p class="text-[20px] leading-[30px] text-title-color sm:mb-[447px] mb-16">"Working with Archiox has been a game changer for our business.</p>
+                            <h3 class="text-2xl leading-[29px] text-dark">Elena M.</h3>
+                            <span class="block text-base leading-6 relative text-text-color">Private Residence Owner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- choose-section end -->
+
+
+        <!-- faq-section -->
+        <section class="faq-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17">
+            <div class="container-layout">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+                    <div class="md:col-span-4 wow fadeUp lg:mb-0 mb-6">
+                        <div class="sec-title">
+                            <h2>FAQs</h2>
+                        </div>
+                    </div>
+                    <div class="md:col-span-8 wow fadeUp">
+                        <ul class="accordion-box two md:-ml-[57px]">
+                            <li class="accordion block active-block rounded-2xl overflow-hidden bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] mb-2.5">
+                                <div class="acc-btn relative active px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">What types of projects do you specialize in?</h3>
+                                </div>
+                                <div class="acc-content current">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="max-w-[750px]">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">What types of projects do you specialize in?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="max-w-[750px]">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Do you handle both design and construction?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="max-w-[750px]">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Can you design eco-friendly or sustainable buildings?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="max-w-[750px]">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="accordion block rounded-2xl overflow-hidden bg-[#F2F2F2] dark:bg-[rgba(255,255,255,0.05)] mb-2.5">
+                                <div class="acc-btn relative px-[30px] py-[30px] pr-16 [&.active]:pb-3 cursor-pointer">
+                                    <div class="icon-box absolute top-9 right-8 text-base text-title-color dark:text-white [.active_&]:rotate-180"><i class="icon-1"></i></div>
+                                    <h3 class="xs:text-[32px] text-2xl xs:leading-[38px] leading-8">Can you design eco-friendly or sustainable buildings?</h3>
+                                </div>
+                                <div class="acc-content">
+                                    <div class="text px-[30px] py-[30px] pt-0">
+                                        <p class="max-w-[750px]">We design residential, commercial, and interior spaces from modern homes to large-scale developments. Our focus is on creating functional, aesthetic, and sustainable architecture.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- faq-section end -->
+
+
+        <!-- location-section -->
+        <section class="location-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 bg-bg-color-2 dark:bg-[rgba(255,255,255,0.05)]"> 
+            <div class="container-layout">
+                <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-[30px]">
+                    <div class="location-block border border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.10)] px-[30px] py-[30px] rounded-2xl wow fadeUp">
+                        <div class="xs:flex gap-6">
+                            <div class="icon-box relative flex items-center justify-center w-12 h-12 leading-12 text-center rounded-[10px] bg-theme-color xs:mb-0 mb-3">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.76074 8.46096C5.76074 9.84096 6.87974 10.96 8.25974 10.96C9.64174 10.96 10.7607 9.84096 10.7607 8.46096C10.7607 7.07896 9.64174 5.95996 8.25974 5.95996" stroke="#FFFCFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.326 11.232C14.122 15.386 10.618 18.75 8.25 18.75C5.352 18.75 0.75 13.709 0.75 8.349C0.75 4.153 4.107 0.75 8.25 0.75C12.392 0.75 15.75 4.153 15.75 8.349" stroke="#FFFCFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="relative">
+                                <h3 class="text-[32px] leading-[38px] mb-3">Open hours</h3>
+                                <p class="text-base leading-6 mb-3 max-w-[210px]">Wednesday to Saturday 12:00 pm - 3:00 pm, 6:00 pm - 9:30 pm</p>
+                                <p class="text-base leading-6 max-w-[210px]">Sunday 12:00 pm - 3:00 pm, 6:00 pm - 8:00 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-block border border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.10)] px-[30px] py-[30px] rounded-2xl wow fadeUp delay-1">
+                        <div class="xs:flex gap-6">
+                            <div class="icon-box relative flex items-center justify-center w-12 h-12 leading-12 text-center rounded-[10px] bg-theme-color xs:mb-0 mb-3">
+                                <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.76074 8.46096C5.76074 9.84096 6.87974 10.96 8.25974 10.96C9.64174 10.96 10.7607 9.84096 10.7607 8.46096C10.7607 7.07896 9.64174 5.95996 8.25974 5.95996" stroke="#FFFCFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.326 11.232C14.122 15.386 10.618 18.75 8.25 18.75C5.352 18.75 0.75 13.709 0.75 8.349C0.75 4.153 4.107 0.75 8.25 0.75C12.392 0.75 15.75 4.153 15.75 8.349" stroke="#FFFCFA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="relative">
+                                <h3 class="text-[32px] leading-[38px] mb-3">Location</h3>
+                                <p class="text-base leading-6 mb-8 max-w-[280px]">123 Sample St, Sydney NSW 2000 AU</p>
+                                <a href="index-5.html" class="relative inline-flex items-center justify-center px-8 py-4 border border-[rgba(102, 98, 94, 0.20)] rounded-[12px] text-base leading-6 font-medium text-title-color gap-2 dark:text-white dark:border-[rgba(255,255,255,0.15)] hover:bg-theme-color hover:text-white hover:border-theme-color"><span>Get directions</span><i class="icon-3 text-[12px] relative top-0.5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location-block border border-[rgba(102,98,94,0.10)] dark:border-[rgba(255,255,255,0.10)] px-[30px] py-[30px] rounded-2xl wow fadeUp delay-2">
+                        <div class="xs:flex gap-6">
+                            <div class="icon-box relative flex items-center justify-center w-12 h-12 leading-12 text-center rounded-[10px] bg-theme-color xs:mb-0 mb-3">
+                                <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.28613 18.6055H16.5549" stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.92 25.9375C3.38625 25.9375 0.9375 25.9375 0.9375 15.5788C0.9375 8.54 1.705 9.03125 5.83625 5.2C7.64375 3.745 10.4562 0.9375 12.885 0.9375C15.3125 0.9375 18.1812 3.73125 20.005 5.2C24.1362 9.03125 24.9025 8.54 24.9025 15.5788C24.9025 23.7225 23.3887 25.4638 18.11 25.8363" stroke="white" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="relative">
+                                <h3 class="text-[32px] leading-[38px] mb-3">Contact us</h3>
+                                <p class="text-base leading-6 mb-3 max-w-[210px]">Bookings & Enquiries +61 2 91234 4567</p>
+                                <p class="text-base leading-6 max-w-[210px]">Private Dining Enquiries <br /><a href="tel:612912344568" class="hover:text-theme-color">+61 2 91234 4568</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- location-section end -->
+
+
+        <!-- cta-section -->
+        <section class="cta-section sm:pt-[100px] pt-17 sm:pb-[100px] pb-17 relative overflow-hidden">
+            <div class="bg-image absolute left-0 top-0 w-full h-full bg-cover bg-no-repeat bg-center bg-fixed before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-[linear-gradient(180deg,#1A1A1A_0%,rgba(26,26,26,0)_100%)]" style="background-image: url(assets/images/background/cta-bg-2.jpg);"></div>
+            <div class="container-layout">
+                <div class="grid md:grid-cols-2 gap-[30px]">
+                    <div class="sec-title light md:mb-0 mb-12 max-w-[580px] wow fadeUp">
+                        <span class="sub-title text-white">Contact us</span>
+                        <h2>Let&apos;s Shape Your Space Together</h2>
+                    </div>
+                    <div class="md:pt-[400px] relative">
+                        <div class="bg-white dark:bg-[rgba(0,0,0,0.50)] rounded-[20px] px-[30px] py-[30px] wow fadeUp">
+                            <div class="sec-title mb-3">
+                                <h2>Ready to begin? Get in touch let&apos;s design something unique.</h2>
+                                <p class="mb-12">Discover spaces where innovation meets nature.</p>
+                                <div class="xs:flex items-center gap-5">
+                                    <a href="contact.html" class="theme-btn secondary-btn xs:mb-0 mb-3"><span class="btn-text"><span>Get in Touch</span></span></a>
+                                    <a href="index-5.html" class="theme-btn secondary-btn"><span class="btn-text"><span>Learn More</span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cta-section end -->
+
+
+        <!-- main-footer -->
+        <footer class="main-footer bg-bg-color-1 dark:bg-[rgba(255,255,255,0.05)]">
+            <div class="container-layout">
+                <div class="sm:pt-[100px] pb-20 pt-20 border-b border-[rgba(102,98,94,0.08)] dark:border-[rgba(255,255,255,0.1)] wow fadeUp">
+                    <div class="sm:flex block items-center justify-between gap-7">
+                        <div class="sm:mb-0 mb-6">
+                            <figure class="footer-logo relative mb-10 dark:hidden"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                            <figure class="footer-logo relative mb-10 hidden dark:block"><a href="index.html"><img src="assets/images/logo-2.png" alt=""></a></figure>
+                            <ul class="sm:flex block items-center gap-6">
+                                <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Home</a></li>
+                                <li><a href="about.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">About Us</a></li>
+                                <li><a href="project.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Projects</a></li>
+                                <li><a href="service.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Services</a></li>
+                                <li><a href="blog.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Blog</a></li>
+                                <li><a href="contact.html" class="text-text-color dark:text-white hover:text-theme-color text-[14px] leading-[21px]">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <ul class="social-card flex items-center justify-center xs:gap-10 gap-2 bg-theme-color rounded-2xl px-7 py-5">
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Instagram</a></li>
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Linkedin</a></li>
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Youtube</a></li>
+                            <li class="text-base leading-6"><a href="index.html" class="text-white hover:underline">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sm:flex items-center justify-between gap-7 py-6 wow fadeUp text-center">
+                    <ul class="flex items-center justify-center sm:gap-6 gap-1">
+                        <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color sm:text-[14px] text-[12px] leading-[21px]">Privacy Policy</a></li>
+                        <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color sm:text-[14px] text-[12px] leading-[21px]">Terms of Service</a></li>
+                        <li><a href="index.html" class="text-text-color dark:text-white hover:text-theme-color sm:text-[14px] text-[12px] leading-[21px]">Cookies Settings</a></li>
+                    </ul>
+                    <p class="sm:text-[14px] text-[12px] leading-[21px]">&copy; copy 2026 <a href="index.html" class="hover:text-theme-color">Archiox</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- main-footer end -->
+
+        
+        <!-- scroll to top -->
+        <div class="ax-back-to-top"><span class="ax-back-to-top-percentage"></span></div>
+        
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/gsap-scroll-trigger.min.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/SplitText.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/odometer.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="assets/js/marquee.min.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+
+</body><!-- End of .page_wrapper -->
+</html>
