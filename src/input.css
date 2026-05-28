@@ -1,5 +1,6 @@
 @import url(../assets/fonts/icon.css);
 @import url(../assets/fonts/satoshi-font.css);
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap');
 @import url(../assets/css/swiper-bundle.min.css);
 @import url(../assets/css/odometer.css);
 @import url(../assets/css/jquery.fancybox.min.css);
@@ -10,14 +11,14 @@
 
 /* Custom Theme Variables */
 @theme {
-  --color-theme-color: #FF7676;
-  --color-secondary-color: #1A1A1A;
-  --color-text-color: #66625E;
-  --color-title-color: #1A1A1A;
-  --color-bg-color-1: #FFFAF5;
-  --color-bg-color-2: #FFFCFA;
+  --color-theme-color: #2F7FA3;
+  --color-secondary-color: #111820;
+  --color-text-color: #56616B;
+  --color-title-color: #121820;
+  --color-bg-color-1: #EEF3F6;
+  --color-bg-color-2: #F7F9FA;
 
-  --font-primary: "Satoshi", "sans-serif";
+  --font-primary: "Archivo", "Satoshi", "sans-serif";
 
   --breakpoint-2xl: 1600px;
   --breakpoint-xl: 1200px;
@@ -41,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply relative block font-medium text-title-color;
+  @apply relative block font-bold text-title-color;
 }
 
 .dark h1,
@@ -126,7 +127,7 @@ textarea,
 
 @layer base {
   body {
-    @apply bg-white text-[18px] text-text-color leading-[27px] font-primary dark:bg-secondary-color dark:text-white;
+    @apply bg-bg-color-2 text-[18px] text-text-color leading-[28px] font-primary dark:bg-secondary-color dark:text-white;
   }
 
   /* Scrollbar Track */
@@ -146,7 +147,7 @@ textarea,
   /* Scrollbar Thumb */
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-image: linear-gradient(0deg, #FF7676 0%, #1A1A1A 47.6%, #FF7676 99.23%
+    background-image: linear-gradient(0deg, #2F7FA3 0%, #AEB8C2 48%, #111820 99.23%
     );
   }
 }
@@ -195,8 +196,8 @@ textarea,
   /* theme-btn */
 
   .theme-btn {
-    @apply relative inline-block rounded-[15px] text-center text-[16px] leading-6 
-           text-white font-medium capitalize px-8 py-[13px];
+    @apply relative inline-block rounded-[10px] text-center text-[15px] leading-6 
+           text-white font-bold uppercase px-8 py-[13px] tracking-[0.02em] shadow-[inset_0_1px_0_rgba(255,255,255,0.24),0_10px_24px_rgba(17,24,32,0.14)];
   }
 
   .theme-btn .btn-text {
@@ -213,6 +214,7 @@ textarea,
 
   .theme-btn.secondary-btn {
     @apply bg-secondary-color;
+    background-image: linear-gradient(135deg, #111820 0%, #2A333C 52%, #6F7B86 100%);
   }
 
   .dark .theme-btn.secondary-btn {
@@ -221,6 +223,7 @@ textarea,
 
   .theme-btn.primary-btn {
     @apply bg-theme-color;
+    background-image: linear-gradient(135deg, #1D5F7B 0%, #2F7FA3 48%, #9DA8B2 100%);
   }
 
   .dark .theme-btn.primary-btn {
@@ -253,8 +256,8 @@ textarea,
 
   /* Main nav link */
   .nav-link {
-    @apply relative md:inline-block pt-[5px] pb-[5px] pl-[11px] pr-[11px] text-text-color text-[14px] leading-5 
-           capitalize border border-transparent hover:border-[rgba(102,98,94,0.1)] rounded-[40px] dark:text-white hover:dark:border-[rgba(255,255,255,0.1)];
+    @apply relative md:inline-block pt-[8px] pb-[8px] pl-[14px] pr-[14px] text-title-color text-[16px] leading-5 
+           font-bold uppercase border border-transparent hover:border-[rgba(47,127,163,0.28)] rounded-[8px] dark:text-white hover:dark:border-[rgba(255,255,255,0.16)];
   }
 
   .dropdown .nav-link{
@@ -266,8 +269,8 @@ textarea,
     content: "\e900";
     font-family: "icomoon";
     font-size: 8px;
-    color: #1A1A1A;
-    top: 6px;
+    color: #2F7FA3;
+    top: 9px;
     right: 15px;
     opacity: 0;
     transition: all 500ms linear;
@@ -279,7 +282,8 @@ textarea,
 
   /* Current active link */
   .nav-link.current {
-    @apply border-[rgba(102,98,94,0.1)] dark:border-[rgba(255,255,255,0.1)];
+    @apply border-[rgba(47,127,163,0.32)] text-theme-color dark:border-[rgba(255,255,255,0.16)];
+    background: linear-gradient(135deg, rgba(47,127,163,0.10), rgba(174,184,194,0.16));
   }
 
   .nav-link.current::before,
@@ -348,7 +352,8 @@ textarea,
   }
 
   .sub-title{
-    @apply relative inline-block text-[14px] leading-5 font-medium text-title-color uppercase bg-[rgba(255,118,118,0.08)] rounded-[30px] px-4 py-2 border border-[rgba(255,118,118,0.08)];
+    @apply relative inline-block text-[13px] leading-5 font-bold text-title-color uppercase rounded-[8px] px-4 py-2 border border-[rgba(47,127,163,0.24)] tracking-[0.08em];
+    background: linear-gradient(135deg, rgba(47,127,163,0.12), rgba(174,184,194,0.22));
   }
 
   .dark .sub-title{
@@ -356,7 +361,7 @@ textarea,
   }
 
   .sec-title h2{
-    @apply sm:text-[56px] sm:leading-[67px] text-4xl leading-11;
+    @apply sm:text-[60px] sm:leading-[68px] text-4xl leading-11 font-black;
   }
 
   .tab-buttons .tab-btn h3{
@@ -365,6 +370,85 @@ textarea,
 
   .tab-buttons .tab-btn.active-btn h3{
     @apply !text-title-color;
+  }
+
+  .header-logo a,
+  .mobile-menu-logo a {
+    @apply font-black uppercase tracking-[0.04em];
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  }
+
+  .main-header .header-lower {
+    background: linear-gradient(180deg, rgba(247,249,250,0.94), rgba(247,249,250,0.72));
+    backdrop-filter: blur(14px);
+  }
+
+  .dark .main-header .header-lower {
+    background: linear-gradient(180deg, rgba(17,24,32,0.94), rgba(17,24,32,0.74));
+  }
+
+  .project-block,
+  .service-block,
+  .feature-block,
+  .blog-column,
+  .chooseus-block,
+  .funfact-block {
+    background: linear-gradient(145deg, rgba(255,255,255,0.92), rgba(238,243,246,0.72));
+    border-color: rgba(111,123,134,0.24) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.78), 0 14px 34px rgba(17,24,32,0.08);
+  }
+
+  .dark .project-block,
+  .dark .service-block,
+  .dark .feature-block,
+  .dark .blog-column,
+  .dark .chooseus-block,
+  .dark .funfact-block {
+    background: linear-gradient(145deg, rgba(35,44,53,0.92), rgba(17,24,32,0.8));
+    border-color: rgba(174,184,194,0.18) !important;
+  }
+
+  .project-block h3,
+  .service-block h2,
+  .feature-block h2,
+  .blog-column h3,
+  .chooseus-block h3,
+  .count-box {
+    @apply font-black;
+  }
+
+  .chooseus-block {
+    @apply relative overflow-hidden transition-all duration-500;
+  }
+
+  .chooseus-block::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out;
+    background: linear-gradient(135deg, #111820 0%, #2A333C 52%, #6F7B86 100%);
+  }
+
+  .chooseus-block > * {
+    @apply relative z-1;
+  }
+
+  .chooseus-block:hover {
+    border-color: rgba(174,184,194,0.34) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 18px 42px rgba(17,24,32,0.22);
+    transform: translateY(-4px);
+  }
+
+  .chooseus-block:hover::before {
+    @apply opacity-100;
+  }
+
+  .chooseus-block:hover h3,
+  .chooseus-block:hover h3 a,
+  .chooseus-block:hover p {
+    @apply !text-white;
+  }
+
+  .chooseus-block:hover svg path {
+    stroke: #FFFFFF;
   }
   
 }
@@ -415,7 +499,7 @@ textarea,
   /* Sticky header base state */
   .sticky-header {
     @apply fixed top-0 left-0 w-full opacity-0 invisible z-0 
-           bg-white dark:bg-secondary-color border-b border-[rgba(0,0,0,0.1)] dark:border-[rgba(255,255,255,0.15)] transition-all duration-500;
+           bg-bg-color-2 dark:bg-secondary-color border-b border-[rgba(17,24,32,0.12)] dark:border-[rgba(255,255,255,0.15)] transition-all duration-500;
   }
 
   /* When scrolling UP + header fixed → show sticky header */
@@ -439,20 +523,20 @@ textarea,
   .banner-bg-image::before {
     content: '';
     @apply absolute left-0 top-0 w-full h-full;
-    background: linear-gradient(90deg, #FFFCFA 0%, rgba(255, 252, 250, 0.8) 40%, rgba(255, 252, 250, 0) 100%);
+    background: linear-gradient(90deg, rgba(247,249,250,0.96) 0%, rgba(238,243,246,0.86) 42%, rgba(247,249,250,0.08) 100%);
   }
 
   .banner-bg-image-two::before {
     content: '';
     @apply absolute left-0 top-0 w-full h-full;
-    background: linear-gradient(180deg, #FFFCFA 0%, rgba(255, 252, 250, 0.7) 34.62%, rgba(255, 252, 250, 0) 100%);
+    background: linear-gradient(180deg, rgba(247,249,250,0.96) 0%, rgba(238,243,246,0.74) 34.62%, rgba(247,249,250,0) 100%);
 
   }
 
   .cta-bg-image::before {
     content: '';
     @apply absolute left-0 top-0 w-full h-full;
-    background: linear-gradient(180deg, rgba(255, 250, 245, 0.8) 0%, rgba(255, 250, 245, 0.56) 45%, rgba(255, 250, 245, 0) 100%);
+    background: linear-gradient(180deg, rgba(238,243,246,0.86) 0%, rgba(238,243,246,0.58) 45%, rgba(238,243,246,0) 100%);
   }
 
   .dark .banner-bg-image::before {
